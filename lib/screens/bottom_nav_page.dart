@@ -8,6 +8,11 @@ class BottomNavPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
+      appBarBuilder: (_,tabsRouter){
+        return AppBar(
+          title: Text(tabsRouter.current.name),
+        );
+      },
       routes: const [
         ProfilePageRoute(),
         SettingsPageRoute(),
